@@ -10,13 +10,13 @@ body {
   background: #fff;
   color: #000;
   line-height: 1.6;
-  padding: 0 8%;
+  padding: 0 8%; /* zachované odsadenie pre obsah */
 }
 
 /* Header */
 header {
   background: #e6e6e6;
-  padding: 15px 40px;
+  padding: 15px 80px; /* zväčšené odsadenie od kraja (bolo 15px 40px) */
   margin: 0 -8%;
 }
 
@@ -85,7 +85,7 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 40px;
+  padding: 60px 80px; /* zväčšené odsadenie (bolo 60px 40px) */
   flex-wrap: wrap;
   background: #e6e6e6;
   margin: 0 -8%;
@@ -111,8 +111,9 @@ nav ul li a:hover::after {
   color: #fff;
 }
 
+/* ÚPRAVA: väčšia fotka v baneri */
 .banner .photo-container img {
-  max-width: 280px;
+  max-width: 320px; /* predtým 280px */
   border-radius: 50%;
   height: auto;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
