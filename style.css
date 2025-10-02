@@ -15,45 +15,49 @@ body {
 /* Header */
 header {
   background: #e6e6e6;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
-header .logo {
-  flex: 1;
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header .logo a {
+
+.logo a {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
   font-size: 20px;
+  font-weight: bold;
+  color: #000;
 }
-header nav {
-  flex: 2;
-}
-header nav ul {
+
+nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 25px;
+  margin: 0;
+  padding: 0;
 }
-header nav ul li a {
+
+nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
   transition: color 0.3s;
 }
-header nav ul li a:hover {
+
+nav ul li a:hover {
   color: #444;
 }
-header .contact {
-  flex: 1;
-  text-align: right;
+
+.contact {
   font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* Banner */
@@ -181,20 +185,27 @@ footer form button:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-  header {
+  nav ul {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 15px;
+    background: #e6e6e6;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
   }
-  header nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin-top: 10px;
+
+  nav ul.show {
+    display: flex;
   }
-  header .contact {
-    margin-top: 10px;
-    text-align: left;
+
+  .hamburger {
+    display: block;
   }
+
   .banner {
     flex-direction: column;
     text-align: center;
