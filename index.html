@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ing. Denis Závacký</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,19 +13,19 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <a href="#home">Ing. Denis Závacký</a>
+        <a href="index.html">Ing. Denis Závacký</a>
       </div>
       <nav>
         <div class="hamburger" id="hamburger">&#9776;</div>
         <ul id="nav-links">
-         <li><a href="about.html">O mne</a></li>
-         <li><a href="services.html">Služby</a></li>
-         <li><a href="blog.html">Blog</a></li>
-         <li><a href="references.html">Referencie</a></li>
-         <li><a href="cooperation.html">Spolupráca</a></li>
-         <li><a href="pricing.html">Cenník</a></li>
-         <li><a href="contact.html">Kontakt</a></li>
-  </ul>
+          <li><a href="about.html">O mne</a></li>
+          <li><a href="services.html">Služby</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="references.html">Referencie</a></li>
+          <li><a href="cooperation.html">Spolupráca</a></li>
+          <li><a href="pricing.html">Cenník</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
       </nav>
       <div class="contact">📞 +421 900 000 000</div>
     </div>
@@ -38,7 +37,7 @@
       <h1>Ing. Denis Závacký</h1>
       <p>Pomáham klientom budovať finančnú istotu, efektívne sporenie a bezpečné investície.</p>
       <div class="buttons">
-        <a href="#about" class="outlined">O mne</a>
+        <a href="about.html" class="outlined">O mne</a>
         <a href="#contact" class="outlined">Dohodnúť konzultáciu</a>
       </div>
     </div>
@@ -49,44 +48,28 @@
 
   <!-- Services -->
   <section class="services-section" id="services">
-  <h2>Komplexné riešenie</h2>
-  <div class="services">
-    <div class="service-box" id="hypoteka">
-      <h3>Hypotéka a financovanie</h3>
-      <p>Riešenie financovania bývania a optimálne hypotéky.</p>
+    <h2>Komplexné riešenie</h2>
+    <div class="services">
+      <div class="service-box"><h3>Hypotéka a financovanie</h3><p>Riešenie financovania bývania a optimálne hypotéky.</p></div>
+      <div class="service-box"><h3>Poistenie príjmu a rodiny</h3><p>Ochrana príjmu a zabezpečenie rodiny.</p></div>
+      <div class="service-box"><h3>Poistenie majetku</h3><p>Komplexná ochrana domu, auta a majetku.</p></div>
+      <div class="service-box"><h3>Tvorba rezervy a investovanie</h3><p>Efektívne sporenie a budovanie majetku.</p></div>
+      <div class="service-box"><h3>Dôchodok</h3><p>Plánovanie a zabezpečenie dôchodkových úspor.</p></div>
+      <div class="service-box"><h3>Pravidelný servis</h3><p>Kontrola a optimalizácia finančných riešení.</p></div>
+      <div class="service-box"><h3>Analýza a návrh riešenia</h3><p>Individuálna analýza a návrh finančného plánu.</p></div>
     </div>
-    <div class="service-box" id="poistenie-prijmu">
-      <h3>Poistenie príjmu a rodiny</h3>
-      <p>Ochrana príjmu a zabezpečenie rodiny.</p>
-    </div>
-    <div class="service-box" id="poistenie-majetku">
-      <h3>Poistenie majetku</h3>
-      <p>Komplexná ochrana domu, auta a majetku.</p>
-    </div>
-    <div class="service-box" id="rezerva-investovanie">
-      <h3>Tvorba rezervy a investovanie</h3>
-      <p>Efektívne sporenie a budovanie majetku.</p>
-    </div>
-    <div class="service-box" id="dochodok">
-      <h3>Dôchodok</h3>
-      <p>Plánovanie a zabezpečenie dôchodkových úspor.</p>
-    </div>
-    <div class="service-box" id="servis">
-      <h3>Pravidelný servis</h3>
-      <p>Kontrola a optimalizácia finančných riešení.</p>
-    </div>
-    <div class="service-box" id="analiza-navrh">
-      <h3>Analýza a návrh riešenia</h3>
-      <p>Individuálna analýza a návrh finančného plánu.</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- CTA -->
-  <section class="cta">
+  <section class="cta" id="contact">
     <h2>Chcete začať riešiť svoje financie ešte dnes?</h2>
-    <a href="#contact">Dohodnúť konzultáciu</a>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <input type="text" name="firstName" placeholder="Meno" required>
+      <input type="text" name="lastName" placeholder="Priezvisko" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Stručne popíšte, čo chcete riešiť" required></textarea>
+      <button type="submit">Odoslať</button>
+    </form>
   </section>
 
   <!-- Blog -->
@@ -98,13 +81,20 @@
   <!-- References -->
   <section id="references">
     <h2>Referencie klientov</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v..." width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
   </section>
 
   <!-- Footer -->
   <footer>
     <h2>Dohodnite si konzultáciu</h2>
-    <a href="#contact">Dohodnúť konzultáciu</a>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <input type="text" name="firstName" placeholder="Meno" required>
+      <input type="text" name="lastName" placeholder="Priezvisko" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Stručne popíšte, čo chcete riešiť" required></textarea>
+      <button type="submit">Odoslať</button>
+    </form>
+
     <p style="margin-top:30px;">Ing. Denis Závacký</p>
     <div class="socials">
       <a href="#">Facebook</a>
@@ -120,7 +110,6 @@
   <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
