@@ -75,20 +75,26 @@ nav ul li a:hover {
   display: inline-block;
   padding: 12px 20px;
   margin-right: 10px;
-  background: #000;
-  color: #fff;
+  border: 2px solid #000;
+  color: #000;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 .banner .buttons a:hover {
-  background: #444;
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 .banner .photo-container img {
   max-width: 350px;
   border-radius: 10px;
   height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  opacity: 1;
+  transform: none;
 }
 
 /* Sections */
@@ -131,10 +137,14 @@ section h2 {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid #000;
 }
 .cta a:hover {
-  background: #ddd;
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 footer {
@@ -204,3 +214,4 @@ footer form button:hover {
     margin: 0 auto;
   }
 }
+
