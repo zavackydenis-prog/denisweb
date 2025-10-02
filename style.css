@@ -45,7 +45,6 @@ nav ul li a {
   font-weight: 500;
   transition: color 0.3s;
 }
-
 nav ul li a:hover {
   color: #444;
 }
@@ -68,54 +67,33 @@ nav ul li a:hover {
   padding: 60px 40px;
   flex-wrap: wrap;
 }
-
 .banner .text {
   max-width: 600px;
 }
-
+.banner .buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border: 2px solid #000;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.banner .buttons a:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 .banner .photo-container img {
   max-width: 350px;
   border-radius: 10px;
   height: auto;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.banner h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-.banner p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-.banner .buttons a,
-.cta a {
-  transition: all 0.3s ease;
-}
-
-.banner .buttons a:hover,
-.cta a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  background-color: #333;
-  color: #fff;
-}
-
-.banner img {
-  max-width: 350px;
-  border-radius: 10px;
-  margin-top: 20px;
+  opacity: 1;
+  transform: none;
 }
 
 /* Sections */
@@ -127,8 +105,6 @@ section h2 {
   font-size: 28px;
   margin-bottom: 40px;
 }
-
-/* Services */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -145,7 +121,6 @@ section h2 {
   transform: translateY(-5px);
 }
 
-/* CTA */
 .cta {
   background: #000;
   color: #fff;
@@ -160,13 +135,16 @@ section h2 {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid #000;
 }
 .cta a:hover {
-  background: #ddd;
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Footer */
 footer {
   background: #f5f5f5;
   text-align: center;
@@ -216,26 +194,22 @@ footer form button:hover {
     padding: 15px 0;
     text-align: center;
   }
-
   nav ul.show {
     display: flex;
   }
-
   .hamburger {
     display: block;
   }
-
   .banner {
     flex-direction: column;
     text-align: center;
   }
   .banner .text {
     max-width: 100%;
+    margin-bottom: 20px;
   }
-  .banner img {
-    margin: 20px auto 0;
+  .banner .photo-container img {
+    margin: 0 auto;
   }
 }
-
-
 
