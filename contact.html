@@ -29,4 +29,26 @@
 
   <main class="page-content">
     <h1>Kontakt</h1>
-    <p>Mô
+    <p>Vyplňte formulár a ozvem sa vám čo najskôr:</p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <input type="text" name="firstName" placeholder="Meno" required>
+      <input type="text" name="lastName" placeholder="Priezvisko" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Stručne popíšte, čo chcete riešiť" required></textarea>
+      <button type="submit">Odoslať</button>
+    </form>
+  </main>
+
+  <footer>
+    <p style="margin-top:30px;">Ing. Denis Závacký</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
