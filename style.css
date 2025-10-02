@@ -10,12 +10,14 @@ body {
   background: #fff;
   color: #000;
   line-height: 1.6;
+  padding: 0 8%; /* menšie okraje stránky */
 }
 
 /* Header */
 header {
   background: #e6e6e6;
   padding: 15px 40px;
+  margin: 0 -8%; /* natiahnutie headera na celú šírku */
 }
 
 .header-container {
@@ -35,8 +37,6 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li a {
@@ -66,10 +66,14 @@ nav ul li a:hover {
   align-items: center;
   padding: 60px 40px;
   flex-wrap: wrap;
+  background: #e6e6e6; /* sivé pozadie */
+  margin: 20px -8% 0 -8%; /* biely pruh medzi hlavičkou a banerom */
 }
+
 .banner .text {
   max-width: 600px;
 }
+
 .banner .buttons a {
   display: inline-block;
   padding: 12px 20px;
@@ -84,16 +88,14 @@ nav ul li a:hover {
 .banner .buttons a:hover {
   background: #000;
   color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
 .banner .photo-container img {
-  max-width: 350px;
-  border-radius: 10px;
+  max-width: 280px;
+  border-radius: 50%; /* kruh */
+  border: 6px solid #000; /* čierny rám */
   height: auto;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  opacity: 1;
-  transform: none;
 }
 
 /* Sections */
@@ -135,16 +137,14 @@ section h2 {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: all 0.3s ease;
   border: 2px solid #000;
 }
 .cta a:hover {
   background: #000;
   color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Footer */
 footer {
   background: #f5f5f5;
   text-align: center;
@@ -155,7 +155,6 @@ footer .socials a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  transition: color 0.3s;
 }
 footer .socials a:hover {
   color: #444;
@@ -174,7 +173,6 @@ footer form button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 footer form button:hover {
   background: #444;
@@ -212,4 +210,5 @@ footer form button:hover {
     margin: 0 auto;
   }
 }
+
 
