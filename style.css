@@ -18,10 +18,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  padding: 15px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+header .logo {
+  flex: 1;
 }
 header .logo a {
   text-decoration: none;
@@ -29,10 +32,14 @@ header .logo a {
   font-weight: bold;
   font-size: 20px;
 }
+header nav {
+  flex: 2;
+}
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 25px;
 }
 header nav ul li a {
   text-decoration: none;
@@ -44,6 +51,8 @@ header nav ul li a:hover {
   color: #444;
 }
 header .contact {
+  flex: 1;
+  text-align: right;
   font-weight: bold;
 }
 
@@ -172,21 +181,19 @@ footer form button:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   header nav ul {
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: #e6e6e6;
-    display: none;
-    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
   }
-  header nav ul.show {
-    display: flex;
-  }
-  header nav ul li {
-    margin-bottom: 15px;
+  header .contact {
+    margin-top: 10px;
+    text-align: left;
   }
   .banner {
     flex-direction: column;
