@@ -68,9 +68,17 @@ nav ul li a:hover {
   padding: 60px 40px;
   flex-wrap: wrap;
 }
+
 .banner .text {
-  max-width: 500px;
+  max-width: 600px;
 }
+
+.banner .photo-container img {
+  max-width: 350px;
+  border-radius: 10px;
+  height: auto;
+}
+
 .banner h1 {
   font-size: 36px;
   margin-bottom: 15px;
@@ -217,3 +225,4 @@ footer form button:hover {
     margin: 20px auto 0;
   }
 }
+
