@@ -141,6 +141,46 @@ section h2 {
   text-align: left;
   transition: transform 0.3s;
 }
+/* Farebné varianty služieb */
+.service-box:nth-child(1) {
+  background: #e6f3ff; /* svetlomodrá */
+  border: 2px solid #99ccff;
+}
+.service-box:nth-child(2) {
+  background: #e9f9ee; /* svetlozelená */
+  border: 2px solid #8cd19d;
+}
+.service-box:nth-child(3) {
+  background: #fff3e6; /* svetlooranžová */
+  border: 2px solid #ffbb80;
+}
+.service-box:nth-child(4) {
+  background: #f4e6ff; /* svetlofialová */
+  border: 2px solid #cba3ff;
+}
+.service-box:nth-child(5) {
+  background: #fffde6; /* svetložltá */
+  border: 2px solid #ffeb80;
+}
+.service-box:nth-child(6) {
+  background: #e6f0ff; /* svetlosivomodrá */
+  border: 2px solid #99bfff;
+}
+.service-box:nth-child(7) {
+  background: #ffe6f0; /* svetloružová */
+  border: 2px solid #ff99bb;
+}
+
+/* Efekt tieňa a hover */
+.service-box {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
 .service-box:hover {
   transform: translateY(-5px);
 }
@@ -232,4 +272,5 @@ footer form button:hover {
     margin: 0 auto;
   }
 }
+
 
