@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
 });
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // funkcia, ktorá spracuje jeden formulár
+  // univerzálna funkcia pre formulár
   function handleForm(formId, thankyouId) {
     const form = document.getElementById(formId);
     const thankyou = document.getElementById(thankyouId);
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // zavoláme funkciu pre oba formuláre
+  // použijeme funkciu pre oba formuláre
   handleForm("kontakt-form-1", "thankyou-1");
   handleForm("kontakt-form-2", "thankyou-2");
 });
