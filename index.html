@@ -135,9 +135,28 @@
     </form>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@formspree/js@1.0.0/dist/formspree.min.js"></script>
+<script>
+  const form = document.getElementById("kontakt-form-1");
+  const thankyou = document.getElementById("thankyou-1");
+
+  const client = new Formspree.Client();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // zastaví presmerovanie
+    const response = await client.submitForm(form);
+    if (response.ok) {
+      form.reset();
+      thankyou.style.display = "block";
+      setTimeout(() => thankyou.style.display = "none", 5000);
+    } else {
+      alert("Nastala chyba pri odoslaní ❌");
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
