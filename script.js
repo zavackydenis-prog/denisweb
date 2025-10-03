@@ -6,42 +6,33 @@ hamburger.addEventListener('click', () => {
 });
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // univerzálna funkcia pre formulár
-  function handleForm(formId, thankyouId) {
-    const form = document.getElementById(formId);
-    const thankyou = document.getElementById(thankyouId);
+  const form = document.getElementById("kontakt-form-1");
+  const thankyou = document.getElementById("thankyou-1");
 
-    if (!form || !thankyou) return;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // zastaví klasické odoslanie
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault(); // zastaví presmerovanie
+    const data = new FormData(form);
 
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-          thankyou.style.display = "block"; // ukáž ďakovnú správu
-          form.reset(); // vymaž polia
-
-          setTimeout(() => {
-            thankyou.style.display = "none"; // skry po 5 sekundách
-          }, 5000);
-        } else {
-          alert("Nastala chyba pri odosielaní správy ❌");
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
         }
-      } catch (error) {
-        alert("Nepodarilo sa pripojiť k serveru ❌");
-      }
-    });
-  }
+      });
 
-  // použijeme funkciu pre oba formuláre
-  handleForm("kontakt-form-1", "thankyou-1");
-  handleForm("kontakt-form-2", "thankyou-2");
+      if (response.ok) {
+        form.reset(); // vymaže polia
+        thankyou.style.display = "block"; // ukáže ďakovnú správu
+        setTimeout(() => thankyou.style.display = "none", 5000);
+      } else {
+        alert("Nastala chyba pri odoslaní správy ❌");
+      }
+
+    } catch (err) {
+      alert("Nepodarilo sa pripojiť k serveru ❌");
+    }
+  });
 });
